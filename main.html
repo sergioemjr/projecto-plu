@@ -13,6 +13,13 @@
   <!-- CSS dependencies -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
   <link rel="stylesheet" href="wireframe.css">
+  <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
+  <script src="mail.js"></script>
+  <script type="text/javascript">
+    (function() {
+      emailjs.init("user_Y5OTIW0SqFxmQ76304UfO");
+    })();
+  </script>
 </head>
 
 <body>
@@ -40,21 +47,28 @@
       </div>
     </div>
   </div>
-  <div class="navbar navbar-dark bg-dark">
-    <div class="container d-flex justify-content-between">
-      <a href="#" class="navbar-brand d-flex align-items-center"><strong>Album</strong> </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"> <span class="navbar-toggler-icon"></span> </button>
-    </div>
-  </div>
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container"> <a class="navbar-brand" href="#">
+        <b> WhatToDo - Portugal</b>
+      </a> </div>
+  </nav>
   <div class="text-center py-5" style="	background-image: url(&quot;assets/top.png&quot;);	background-position: top left;	background-size: 40%;	background-repeat: repeat;">
     <div class="container">
       <div class="row my-5 justify-content-center">
         <div class="col-md-9">
-          <img class="img-fluid d-block mx-auto" src="assets/logo-dark copy.png" width="300">
-          <h1>WhatToDo Portugal</h1>
-          <p class="lead text-muted">Seja o primeiro a saber sobre&nbsp;<br>eventos, workshops, concertos... e muito mais!</p>
-          <a href="#000000" class="btn btn-primary m-2" style="	box-shadow: 0px 0px 4px  black;">Próximos acontecimentos</a>
-          <a href="#" class="btn btn-secondary m-2" style="	box-shadow: 0px 0px 4px  black;">ESPECIAIS<br></a>
+          <img class="img-fluid d-block mx-auto" src="assets/logo-dark.png" width="300">
+          <h1 class="p-2">Portugal</h1>
+          <p class="lead text-muted">Seja o primeiro a saber sobre eventos, workshops, concertos... e muito mais.<br>Envie-nos o teu e-mail&nbsp; e deixe connosco :)</p>
+          <div class="row">
+            <div class="col-md-12">
+              <form class="form-inline">
+                <div class="input-group">
+                  <input id="txtMail" type="text" class="form-control" placeholder="Seu e-mail">
+                  <div class="input-group-append"><button class="btn btn-primary" type="button" onclick="sendEmail()">Quero!</button></div>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -115,6 +129,11 @@
             <p class="card-text" style="">20/12/2018</p><a class="btn btn-primary" href="event-01.html"><b>SABER MAIS</b></a>
           </div>
         </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4"></div>
+        <div class="col-md-4"><a class="btn btn-primary btn-lg" href="#"><b>Janeiro &gt;</b></a></div>
       </div>
     </div>
   </div>
